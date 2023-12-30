@@ -72,6 +72,11 @@ local function refresh_item_box(player, factory, show_floor_items, item_category
         and util.actions.tutorial_tooltip(action, nil, player) or nil
     local real_products = (not shows_floor_items and item_category == "product")
 
+    local ltn_data = nil
+    if remote.interfaces.LtnManager and remote.interfaces.LtnManager.get_provided_inventory_for_surface then
+        ltn_data = remote.call("LtnManager", "get_provided_inventory_for_surface", player.surface.index)
+    end
+
     local function build_item(item, index)
         local required_amount = (item.class == "Product") and item:get_required_amount() or nil
         local amount, number_tooltip = view_state.process_item(metadata, item, required_amount, nil)
@@ -87,6 +92,12 @@ local function refresh_item_box(player, factory, show_floor_items, item_category
             if satisfied_percentage <= 0 then style = "flib_slot_button_red"
             elseif satisfied_percentage < 100 then style = "flib_slot_button_yellow"
             else style = "flib_slot_button_green" end
+        end
+
+        if item_category == "ingredient" and ltn_data ~= nil then
+            if ltn_data["item," .. item.proto.name] ~= nil and ltn_data["item," .. item.proto.name][-1] ~= nil then
+                style = "flib_slot_button_green"
+            end
         end
 
         local name_line = {"fp.tt_title", item.proto.localised_name}

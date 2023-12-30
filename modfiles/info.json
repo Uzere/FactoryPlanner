@@ -1,12 +1,13 @@
 {
-    "name": "factoryplanner",
+    "name": "factoryplanner-fork-uzere",
     "version": "1.1.78",
-    "title": "Factory Planner",
+    "title": "Factory Planner forked by Uzere",
     "author": "Therenas",
     "factorio_version": "1.1",
     "dependencies": [
         "base >= 1.1.82",
         "flib >= 0.12.0",
-        "? RecipeBook"
+        "? RecipeBook",
+        "? LtnManager >= 0.4.25"
     ]
 }
