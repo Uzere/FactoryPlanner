@@ -256,7 +256,7 @@ end
 -- ** TOP LEVEL **
 ---@param skip_check boolean Whether the mod version check is skipped
 function loader.run(skip_check)
-    if not skip_check and script.active_mods["factoryplanner"] ~= global.installed_mods["factoryplanner"] then
+    if not skip_check and script.active_mods["factoryplanner-fork-uzere"] ~= global.installed_mods["factoryplanner-fork-uzere"] then
         return  -- if the mod version changed, the loader will be re-run after migration anyways
     end
 

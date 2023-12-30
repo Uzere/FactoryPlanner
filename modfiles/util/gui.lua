@@ -135,7 +135,7 @@ function _gui.reset_player(player)
     check_empty_flow(player)  -- make sure no empty flow is left behind
 
     for _, gui_element in pairs(player.gui.screen.children) do  -- all mod frames
-        if gui_element.valid and gui_element.get_mod() == "factoryplanner" then
+        if gui_element.valid and gui_element.get_mod() == "factoryplanner-fork-uzere" then
             gui_element.destroy()
         end
     end

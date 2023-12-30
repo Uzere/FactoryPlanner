@@ -108,7 +108,7 @@ styles["fp_frame_semitransparent"] = {
     graphical_set = {
         base = {
             type = "composition",
-            filename = "__factoryplanner__/graphics/semitransparent_pixel.png",
+            filename = "__factoryplanner-fork-uzere__/graphics/semitransparent_pixel.png",
             corner_size = 1,
             position = {0, 0}
         }
@@ -120,7 +120,7 @@ styles["fp_frame_transparent"] = {
     graphical_set = {
         base = {
             type = "composition",
-            filename = "__factoryplanner__/graphics/transparent_pixel.png",
+            filename = "__factoryplanner-fork-uzere__/graphics/transparent_pixel.png",
             corner_size = 1,
             position = {0, 0}
         }

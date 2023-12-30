@@ -10,7 +10,7 @@ data:extend({
         associated_control_input = "fp_toggle_interface",
         icon =
         {
-            filename = "__factoryplanner__/graphics/shortcut_open_x32.png",
+            filename = "__factoryplanner-fork-uzere__/graphics/shortcut_open_x32.png",
             priority = "extra-high-no-scale",
             size = 32,
             scale = 1,
@@ -18,7 +18,7 @@ data:extend({
         },
         small_icon =
         {
-            filename = "__factoryplanner__/graphics/shortcut_open_black_x24.png",
+            filename = "__factoryplanner-fork-uzere__/graphics/shortcut_open_black_x24.png",
             priority = "extra-high-no-scale",
             size = 24,
             scale = 1,
@@ -26,7 +26,7 @@ data:extend({
         },
         disabled_small_icon =
         {
-            filename = "__factoryplanner__/graphics/shortcut_open_white_x24.png",
+            filename = "__factoryplanner-fork-uzere__/graphics/shortcut_open_white_x24.png",
             priority = "extra-high-no-scale",
             size = 24,
             scale = 1,

@@ -65,7 +65,7 @@ end
 ---@param comparison_version VersionString?
 ---@return Migration[]?
 function migrator.determine_migrations(comparison_version)
-    local previous_version = global.installed_mods["factoryplanner"]
+    local previous_version = global.installed_mods["factoryplanner-fork-uzere"]
 
     -- 1.1.60 is the first version that can be properly migrated (doesn't apply to export strings)
     if not comparison_version and not compare_versions("1.1.59", previous_version) then return nil end
@@ -99,7 +99,7 @@ end
 -- Applies any appropriate migrations to the given export_table's factories
 ---@param export_table ExportTable
 function migrator.migrate_export_table(export_table)
-    local export_version = export_table.export_modset["factoryplanner"]
+    local export_version = export_table.export_modset["factoryplanner-fork-uzere"]
     export_table.factories = export_table.factories or export_table.subfactories  -- migration
     local migrations = migrator.determine_migrations(export_version)  ---@cast migrations -nil
 
